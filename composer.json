@@ -1,0 +1,27 @@
+{
+    "name": "sequra/magento2-partpayments",
+    "description": "SeQura Invoice Payment Method",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "SeQura Engineering",
+            "email": "dev@sequra.es"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "sequra/magento2-core": "*"
+    },
+    "version": "2.0.1",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Sequra\\Partpayments\\": ""
+        }
+    }
+}

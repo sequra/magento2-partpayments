@@ -1,0 +1,12 @@
+<script src="<?php echo $block->getCostUrl(); ?>"></script>
+<div id="sequra_partpayment_teaser"></div>
+<script type="text/x-magento-init">
+    {
+        "#sequra_partpayment_teaser": {
+            "Sequra_Partpayments/js/teaser-js": {
+                "css_price_selector": "<?php echo $block->getData('price_sel');?>",
+                "css_dest_selector": "<?php echo $block->getData('dest_sel');?>"
+            }
+        }
+    }
+</script>
