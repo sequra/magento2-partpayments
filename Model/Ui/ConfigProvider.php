@@ -2,10 +2,13 @@
 /**
  * Copyright © 2017 SeQura Engineering. All rights reserved.
  */
+
 namespace Sequra\Partpayments\Model\Ui;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
+
 //@todo: Implement toknization as option
+
 /**
  * Class ConfigProvider
  */
