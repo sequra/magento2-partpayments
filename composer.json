@@ -1,6 +1,6 @@
 {
     "name": "sequra/magento2-partpayments",
-    "description": "SeQura Invoice Payment Method",
+    "description": "SeQura Part Payments Payment Method",
     "type": "magento2-module",
     "keywords": [
         "payment",
