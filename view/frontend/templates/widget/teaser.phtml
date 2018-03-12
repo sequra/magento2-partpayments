@@ -1,5 +1,9 @@
-<script src="<?php echo $block->getCostUrl(); ?>"></script>
 <div id="sequra_partpayment_teaser"></div>
+<script>
+    require([
+        '<?php echo $block->getCostUrl(); ?>'
+    ], function () {});
+</script>
 <script type="text/x-magento-init">
     {
         "#sequra_partpayment_teaser": {
