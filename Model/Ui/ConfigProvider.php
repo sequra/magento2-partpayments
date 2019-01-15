@@ -7,8 +7,6 @@ namespace Sequra\Partpayments\Model\Ui;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
 
-//@todo: Implement toknization as option
-
 /**
  * Class ConfigProvider
  */
@@ -25,8 +23,7 @@ final class ConfigProvider implements ConfigProviderInterface
     {
         return [
             'payment' => [
-                self::CODE => [
-                ]
+                self::CODE => []
             ]
         ];
     }

@@ -11,6 +11,10 @@
                 <label>Place CSS Sel.</label>
                 <description>Leave empty not to move it</description>
             </parameter>
+            <parameter name="theme" sort_order="10" visible="true" xsi:type="text">
+                <label>Theme</label>
+                <description>Theme (white, legacy...) or json with options. Leave empty for dafault</description>
+            </parameter>
         </parameters>
     </widget>
 </widgets>
