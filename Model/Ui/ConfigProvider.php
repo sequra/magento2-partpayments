@@ -10,7 +10,7 @@ use Magento\Checkout\Model\ConfigProviderInterface;
 /**
  * Class ConfigProvider
  */
-final class ConfigProvider implements ConfigProviderInterface
+final class ConfigProvider extends \Sequra\Core\Model\Ui\ConfigProvider
 {
     const CODE = 'sequra_partpayments';
 
@@ -21,9 +21,15 @@ final class ConfigProvider implements ConfigProviderInterface
      */
     public function getConfig()
     {
+        $config = parent::getConfig();
         return [
             'payment' => [
-                self::CODE => []
+                self::CODE => [
+                    'configuration' => $config['payment']['sequra_configuration'],
+                    'showlogo' => $this->config->getValue('showlogo'),
+                    'product' => $this->config->getValue('product'),
+
+                ]
             ]
         ];
     }

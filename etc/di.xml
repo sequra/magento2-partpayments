@@ -24,6 +24,12 @@
             <argument name="methodCode" xsi:type="const">\Sequra\Partpayments\Model\Ui\ConfigProvider::CODE</argument>
         </arguments>
     </virtualType>
+    <type name="Sequra\Partpayments\Model\Ui\ConfigProvider">
+       <arguments>
+           <argument name="config" xsi:type="object">SequraPartpaymentsGatewayConfig</argument>
+       </arguments>
+    </type>
+
     <!-- Value handlers infrastructure -->
     <virtualType name="SequraPartpaymentsGatewayValueHandlerPool" type="Magento\Payment\Gateway\Config\ValueHandlerPool">
         <arguments>

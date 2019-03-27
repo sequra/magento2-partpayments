@@ -9,15 +9,20 @@
         <section id="payment" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
             <group id="sequra" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
                 <group id="partpayments" translate="label" type="text" sortOrder="2000" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Fracciona tu pago</label>
+                    <label>Pago flexible</label>
                     <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <config_path>payment/sequra_partpayments/active</config_path>
                         <label>Enabled</label>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
-                    <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                         <label>Title</label>
                         <config_path>payment/sequra_partpayments/title</config_path>
+                    </field>
+                     <field id="showlogo" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <config_path>payment/sequra_partpayments/showlogo</config_path>
+                        <label>Show logo</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>                    
                     <field id="max_order_total" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                         <config_path>payment/sequra_partpayments/max_order_total</config_path><label>Max order amount</label>
