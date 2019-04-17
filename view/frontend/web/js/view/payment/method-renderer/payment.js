@@ -65,9 +65,9 @@ define(
             getAmount: function () {
                 var totals = quote.getTotals()();
                 if (totals) {
-                    return Math.round(totals['grand_total']*100);
+                    return Math.round(totals['base_grand_total']*100);
                 }
-                return Math.round(quote['grand_total']*100);
+                return Math.round(quote['base_grand_total']*100);
             },
     
             showLogo: function(){
