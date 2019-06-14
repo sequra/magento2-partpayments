@@ -12,7 +12,7 @@
                 <title>Fracciona tu pago</title>
                 <active>1</active>
                 <model>SequraPartpaymentsGatewayFacade</model>
-                <max_order_total>1000</max_order_total>
+                <max_order_total>10000</max_order_total>
                 <min_order_total>50</min_order_total>
                 <is_gateway>1</is_gateway>
                 <can_order>1</can_order>
