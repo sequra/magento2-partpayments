@@ -9,8 +9,9 @@
         <payment>
             <sequra_partpayments>
                 <debug>1</debug>
-                <title>Fracciona tu pago</title>
+                <title>Pago flexible</title>
                 <active>1</active>
+                <showlogo>1</showlogo>
                 <model>SequraPartpaymentsGatewayFacade</model>
                 <max_order_total>10000</max_order_total>
                 <min_order_total>50</min_order_total>

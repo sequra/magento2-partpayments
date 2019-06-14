@@ -10,7 +10,18 @@
                class="radio"
                data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
         <label class="label" data-bind="attr: {'for': getCode()}">
-            <span data-bind="text: getTitle()"></span>
+            <!-- ko if: showLogo() -->
+            <div data-bind="attr: { 'class': 'sequra_logo ' + getCode() }"></div>
+            <!--/ko-->
+            <span id="sequra_partpayment_title" data-bind="text: title"></span>
+            &nbsp;
+            <span class="sequra-educational-popup"
+                data-bind="
+                    attr: {
+                        'data-product': getProduct(),
+                        'data-amount': getAmount()
+                    }
+                "> + info</span>
         </label>
     </div>
 
@@ -31,10 +42,15 @@
         <div class="actions-toolbar">
             <div class="primary">
                 <button class="action primary checkout"
-                        type="submit"
-                        data-bind="click: showSequraForm, enable: (getCode() == isChecked())"
-                        disabled>
-                    <span data-bind="i18n: 'Continue to payment'"></span>
+                    type="submit"
+                    data-bind="
+                    click: showSequraForm,
+                    attr: {title: $t('Place Order')},
+                    css: {disabled: !isPlaceOrderActionAllowed()},
+                    enable: (getCode() == isChecked())
+                    "
+                    disabled>
+                    <span data-bind="i18n: 'Place order'"></span>
                 </button>
             </div>
         </div>
