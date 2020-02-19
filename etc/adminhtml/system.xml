@@ -9,7 +9,7 @@
         <section id="payment" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
             <group id="sequra" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
                 <group id="partpayments" translate="label" type="text" sortOrder="2000" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Pago flexible</label>
+                    <label>Fraccionar pago</label>
                     <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <config_path>payment/sequra_partpayments/active</config_path>
                         <label>Enabled</label>

@@ -9,7 +9,7 @@
         <payment>
             <sequra_partpayments>
                 <debug>1</debug>
-                <title>Pago flexible</title>
+                <title>Fraccionar pago</title>
                 <active>1</active>
                 <showlogo>1</showlogo>
                 <model>SequraPartpaymentsGatewayFacade</model>

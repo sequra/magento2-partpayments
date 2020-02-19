@@ -43,7 +43,7 @@ define(
                         product: window.checkoutConfig.payment.sequra_partpayments.product
                     });
                     var ca = creditAgreements[window.checkoutConfig.payment.sequra_partpayments.product];
-                    comp.title('Desde ' + ca[ca.length - 1]["instalment_total"]["string"] + '/mes');
+                    comp.title('Fracciona tu pago desde ' + ca[ca.length - 1]["instalment_total"]["string"] + '/mes');
                 });
                 return this;
             },
