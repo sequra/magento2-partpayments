@@ -16,9 +16,9 @@ define(
 
         return function (messageContainer) {
             var serviceUrl,
-                ShowSequraForm = function () {
+                placeOrder = function () {
                     if (typeof window.SequraFormInstance === 'undefined') {
-                        setTimeout(ShowSequraForm, 100);
+                        setTimeout(placeOrder, 100);
                         return;
                     }
                     window.SequraFormInstance.setCloseCallback(function () {
@@ -36,7 +36,7 @@ define(
                         function (response) {
                             $('[id^="sq-identification"]').remove();
                             $('body').append(response);
-                            ShowSequraForm();
+                            placeOrder();
                         }
                     ).fail(
                         function (response) {

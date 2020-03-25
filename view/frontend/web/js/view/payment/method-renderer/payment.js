@@ -74,7 +74,7 @@ define(
                 return window.checkoutConfig.payment.sequra_partpayments.showlogo === "1";
             },
     
-            showSequraForm: function () {
+            placeOrder: function () {
                if (additionalValidators.validate()) {
                    //update payment method information if additional data was changed
                    this.selectPaymentMethod();
