@@ -24,7 +24,6 @@ define(
             var m = document.getElementsByTagName('script')[0];
             m.parentNode.insertBefore(a, m);
         }
-    
         return Component.extend({
             defaults: {
                 template: 'Sequra_Partpayments/payment/form',
@@ -45,23 +44,24 @@ define(
                     var ca = creditAgreements[window.checkoutConfig.payment.sequra_partpayments.product];
                     comp.title('Fracciona tu pago desde ' + ca[ca.length - 1]["instalment_total"]["string"] + '/mes');
                 });
+                Sequra.onLoad(function(){Sequra.refreshComponents();});
                 return this;
             },
 
             getCode: function() {
                 return 'sequra_partpayments';
             },
-    
+
             getData: function() {
                 return {
                     'method': this.item.method
                 };
             },
-    
+
             getProduct: function(){
                 return window.checkoutConfig.payment.sequra_partpayments.product;
             },
-    
+
             getAmount: function () {
                 var totals = quote.getTotals()();
                 if (totals) {
@@ -69,11 +69,11 @@ define(
                 }
                 return Math.round(quote['base_grand_total']*100);
             },
-    
+
             showLogo: function(){
                 return window.checkoutConfig.payment.sequra_partpayments.showlogo === "1";
             },
-    
+
             placeOrder: function () {
                if (additionalValidators.validate()) {
                    //update payment method information if additional data was changed
