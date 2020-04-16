@@ -13,7 +13,7 @@ define(
     function (Component, setPaymentMethodAction, additionalValidators, quote) {
         'use strict';
         if('undefined' == typeof window.Sequra){
-            window.SequraConfiguration = window.checkoutConfig.payment.sequra_invoice.configuration;
+            window.SequraConfiguration = window.checkoutConfig.payment.sequra_partpayments.configuration;
             window.SequraOnLoad = [];
             window.Sequra = {
                 onLoad: function (callback) {
