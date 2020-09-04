@@ -17,6 +17,7 @@ define(
         return function (messageContainer) {
             var serviceUrl,
                 placeOrder = function () {
+                    fullScreenLoader.startLoader();
                     if (typeof window.SequraFormInstance === 'undefined') {
                         setTimeout(placeOrder, 100);
                         return;
@@ -27,6 +28,7 @@ define(
                     });
                     window.SequraFormInstance.setElement("sq-identification-pp3");
                     window.SequraFormInstance.show();
+                    fullScreenLoader.stopLoader();
                 };
 
             return setPaymentInformation(messageContainer, quote.paymentMethod()).done(
