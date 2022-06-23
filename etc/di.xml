@@ -15,6 +15,7 @@
             <argument name="infoBlockType" xsi:type="string">Magento\Payment\Block\ConfigurableInfo</argument>
             <argument name="valueHandlerPool" xsi:type="object">SequraPartpaymentsGatewayValueHandlerPool</argument>
             <argument name="validatorPool" xsi:type="object">SequraPartpaymentsValidatorPool</argument>
+            <argument name="commandPool" xsi:type="object">SequraGatewayCommandPool</argument>
         </arguments>
     </virtualType>
 
