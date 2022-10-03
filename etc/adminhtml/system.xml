@@ -33,12 +33,12 @@
                         <label>Min order amount</label>
                         <frontend_class>validate-number</frontend_class>
                     </field>
-                    <field id="allowspecific" translate="label" type="allowspecific" sortOrder="140" showInDefault="0"
+                    <!-- <field id="allowspecific" translate="label" type="allowspecific" sortOrder="140" showInDefault="0"
                            showInWebsite="0" showInStore="1">
                         <config_path>payment/sequra_partpayments/allowspecific</config_path>
                         <label>Payment From Applicable Countries</label>
                         <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
-                    </field>
+                    </field> -->
                     <field id="specificcountry" translate="label" type="multiselect" sortOrder="150" showInDefault="0"
                            showInWebsite="0" showInStore="1">
                         <config_path>payment/sequra_partpayments/specificcountry</config_path>
