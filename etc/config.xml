@@ -9,7 +9,7 @@
         <payment>
             <sequra_partpayments>
                 <debug>1</debug>
-                <title>Fraccionar pago</title>
+                <title>Paga Fraccionado en %{instalment_counts} meses</title>
                 <active>1</active>
                 <showlogo>1</showlogo>
                 <model>SequraPartpaymentsGatewayFacade</model>
