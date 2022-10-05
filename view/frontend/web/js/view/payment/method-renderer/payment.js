@@ -42,7 +42,10 @@ define(
                         product: window.checkoutConfig.payment.sequra_partpayments.product
                     });
                     var ca = creditAgreements[window.checkoutConfig.payment.sequra_partpayments.product];
-                    comp.title('Fracciona tu pago desde ' + ca[ca.length - 1]["instalment_total"]["string"] + '/mes');
+                    var interpolated_title = comp.item.title
+                        .replace('%s', ca[ca.length - 1]["instalment_total"]["string"])
+                        .replace('%{instalment_total}', ca[ca.length - 1]["instalment_total"]["string"]);
+                    comp.title(interpolated_title);
                 });
                 Sequra.onLoad(function(){Sequra.refreshComponents();});
                 return this;
