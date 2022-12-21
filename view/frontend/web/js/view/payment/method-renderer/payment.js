@@ -34,7 +34,7 @@ define(
                     .observe([
                         'title'
                     ]);
-                this.title(this.item.title);
+                this.title(window.checkoutConfig.payment.sequra_partpayments.checkout_title);
                 var comp = this;
                 Sequra.onLoad(function(){
                     var creditAgreements = Sequra.computeCreditAgreements({
@@ -50,7 +50,7 @@ define(
                         ""
                     ).replace(/,([\d]*),$/, " " + jQuery.mage.__('or') + " $1");
                     ca.reverse(); //leave it as it was
-                    var interpolated_title = comp.item.title
+                    var interpolated_title = window.checkoutConfig.payment.sequra_partpayments.checkout_title
                         .replace('%s', instalment_total)
                         .replace('%{instalment_counts}', instalment_counts)
                         .replace('%{instalment_total}', instalment_total);
